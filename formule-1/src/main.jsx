@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import './index.css'
-import Drivers from './component/drivers/drivers'
+import DriversPage from './pages/drivers'
 import {
   createBrowserRouter,
   RouterProvider
@@ -14,8 +14,10 @@ const router = createBrowserRouter([
     element: <App />,
     children: [{
      path: "/drivers",
-     element:<Drivers />
-    }]}
+     element:<DriversPage />
+    }
+    ]
+  }
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

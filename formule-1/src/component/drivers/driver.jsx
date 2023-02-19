@@ -1,12 +1,13 @@
 import React from "react";
 
 
-function Driver(props) {
+function Driver({ driver,handleClick }) {
     return (
-        <div>
-            <img  src={props.picture} alt={props.name} />
-            <p>Name: { props.name } </p>
-            <p>Ecurie: {props.ecurie} </p>
+        <div onClick={handleClick} id={driver.number}
+        key={driver.number}>
+            <img  src="ok" alt={driver.name} />
+            <p>Name: { driver.name } </p>
+            <p>Team: {driver.team} </p>
         </div>
     )
 }
