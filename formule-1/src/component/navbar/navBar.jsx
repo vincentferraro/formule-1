@@ -1,6 +1,6 @@
 import React from "react";
 import ButtonLink from "./buttonLink";
-
+import { Link } from "react-router-dom";
 function NavBar() {
     const datas = [
         {
@@ -16,9 +16,13 @@ function NavBar() {
             link: "/ecuries"
         },
     ]
+
+    const handleClick = (event) => {
+        
+    }
     return (
         <ul>
-            {datas.map(data => { return <ButtonLink key={data.title} title={data.title} link={data.link} /> })}
+            {datas.map(data => { return <Link to={data.title}>{data.title}</Link> })}
         </ul>
     )
 }
