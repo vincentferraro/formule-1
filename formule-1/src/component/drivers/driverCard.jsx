@@ -1,7 +1,7 @@
 import React from "react";
 
 
-function DriverCard(driver) {
+function DriverCard({ driver }) {
     return (
         <div>
             <img src="" alt="" />

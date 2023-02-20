@@ -30,19 +30,20 @@ function DriversPage() {
     const [driver, setDriver] = useState(null)
 
     const handleClick = (event) => {
-        console.log("Click", event.target.id)
-        console.log(parseInt(event.target.id))
-        const driver = drivers.map(driver => { if (driver.number === parseInt(event.target.id)) { return driver } })
-        console.log(driver)
-        setDriver(drivers.find(driver => driver.number === parseInt(event.target.id)))
-        console.log("DriverModified",driver)
+        for (const driver of drivers) {
+            if (driver.number === parseInt(event.target.id)) {
+                setDriver(driver)
+            }
+
+        }
+        console.log('driversetup', driver)
     }
     //
     // TO DO: Fix handle Click: setDriver when click on div from Driver component
     return (
         <div>
             <Drivers handleClick={handleClick} drivers={drivers} />
-            <DriverPresentation driversData={drivers} />
+            <DriverPresentation driverData={driver} />
         </div>
 
     )
