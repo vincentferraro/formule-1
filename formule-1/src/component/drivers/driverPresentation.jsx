@@ -6,7 +6,7 @@ function DriverPresentation({driverData} ) {
     
     
     return (
-        <div>
+        <div class= "w-3/6 h-screen border-solid border-2 justify-center align-center ">
             {driverData?<DriverCard
                 driver={driverData}
             />:<h1>Click on Driver to show this data</h1>}

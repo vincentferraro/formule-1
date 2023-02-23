@@ -6,7 +6,7 @@
   padding:0;
   color-scheme: light dark;
   color: black;
-  background-color: #FEFEFE;
+  background-color: grey;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -14,14 +14,16 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+* {
+margin: 0;
+padding: 0;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body{
-  margin:0;
-  padding:0;
-}
+
 /* 
 a {
   font-weight: 500;

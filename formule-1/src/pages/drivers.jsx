@@ -25,6 +25,23 @@ function DriversPage() {
         team: "Red Bull Racing",
         picture: verstappen,
         number:1
+        },
+    {
+        name: "Lewis Hamilton",
+        team: "Mercedes",
+        picture: hamilton,
+        number:42
+    },{
+        name: "Charles Leclerc",
+        team: "Ferrari",
+        picture: leclerc,
+        number:13
+        },
+    {
+        name: "Max Verstappen",
+        team: "Red Bull Racing",
+        picture: verstappen,
+        number:12
         }]
     
     const [driver, setDriver] = useState(null)
@@ -41,7 +58,7 @@ function DriversPage() {
     //
     // TO DO: Fix handle Click: setDriver when click on div from Driver component
     return (
-        <div>
+        <div class="flex">
             <Drivers handleClick={handleClick} drivers={drivers} />
             <DriverPresentation driverData={driver} />
         </div>

@@ -3,7 +3,7 @@ import React from "react";
 
 function DriverCard({ driver }) {
     return (
-        <div>
+        <div class= "w-3/6 h-screen border-solid border-2" >
             <img src="" alt="" />
             <div>
                 <ul>
