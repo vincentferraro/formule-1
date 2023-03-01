@@ -10,9 +10,13 @@ import redbullCar from '../img/teams/red_bull_car.png'
 import ferrariLogo from '../img/teams/ferrari_logo.png'
 import ferrariCar from '../img/teams/ferrari_car.png'
 
+// useState
+import { useState } from "react";
+
 function TeamsPage() {
 
     const teams = [{
+        id:1,
         name: 'Mercedes',
         chief: 'Toto Wolff',
         picture: {
@@ -23,6 +27,7 @@ function TeamsPage() {
         base: 'Brackley, United Kingdom'
     },
         {
+            id:2,
         name: 'Red Bull',
         chief: 'Christian Horner',
         picture: {
@@ -33,6 +38,7 @@ function TeamsPage() {
         base: 'Milton Keynes, United Kingdom'
         },
         {
+            id:3,
         name: 'Ferrari',
         chief: 'Frederic Vasseur',
         picture: {
@@ -44,20 +50,27 @@ function TeamsPage() {
         },
 
     ]
+    const [team, setTeam] = useState(null)
     
+    const handleClick = (event) => {
+        teams.forEach(team => {
+            console.log(team)
+            if (event.target.id == team.id) {
+                setTeam(team)
+            }
+        })
+    }
 
     return (
 
-        <div>
-            <h1>Teams</h1>
-            <div>
-                <p>Test</p>
-                <TeamsList teams={teams} />
-                {/* <TeamPresentation  /> */}
+        <div class="flex-col w-screen h-screen border-2 border-black">
+            <div class="flex w-screen">
+                <TeamsList teams={teams} handleClick={handleClick} />
+                <TeamPresentation data={team} /> 
             </div>
             
         </div>
     )
 }
-
+// TO DO: Continue HandleClick function
 export default TeamsPage

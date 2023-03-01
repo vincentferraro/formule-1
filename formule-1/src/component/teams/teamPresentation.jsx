@@ -3,7 +3,7 @@ import TeamCard from './teamCard'
 
 function TeamPresentation({ data }) {
     return (
-        <div>
+        <div class="flex-col w-1/2 border-2 border-black">
             <div>
                 <TeamCard team={data} />
             </div>

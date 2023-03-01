@@ -1,17 +1,10 @@
 import React from 'react'
-
-function TeamsList({teams}) {
-    
-    console.log(teams)
+import TeamButton from './teamButton'
+function TeamsList({teams, handleClick}) {
     return (
-        <div>
-            <p>Test</p>
+        <div class="flex flex-col h-screen w-1/2 border-2 border-black items-center ">
             {teams?.map(team => 
-                
-                <div> 
-                    <p>{team.name}</p>
-                    <img src={team.picture.logo} />
-                </div>
+                <TeamButton team={team} handleClick={handleClick} />
             )}
         </div>
     )
