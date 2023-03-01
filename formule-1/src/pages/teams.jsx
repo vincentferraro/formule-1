@@ -63,7 +63,7 @@ function TeamsPage() {
 
     return (
 
-        <div class="flex-col w-screen h-screen border-2 border-black">
+        <div class="flex-col bg-blue w-screen h-screen border-2 border-black">
             <div class="flex w-screen">
                 <TeamsList teams={teams} handleClick={handleClick} />
                 <TeamPresentation data={team} /> 
